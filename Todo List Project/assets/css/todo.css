@@ -1,0 +1,9 @@
+body {
+    background-color: lightblue;
+}
+
+#container {
+    border: orange 2px solid;
+    width: 360px;
+    margin: 0 auto;
+}
