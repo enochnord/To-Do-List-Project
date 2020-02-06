@@ -1,9 +1,84 @@
+/* background and font for webpage */
 body {
-    background-color: lightblue;
+background: #F1F3EE;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #DECBA4, #F1F3EE);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #DECBA4, #F1F3EE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+font-family: 'Gudea', sans-serif;
 }
 
+/* header on top of to-do list */
+h1 {
+   background-color: #383C47;
+   color: #F1F3EE;
+   margin: 0;
+   padding: 10px 20px;
+   text-transform: uppercase;
+   font-size: 24px;
+   font-weight: normal;
+}
+
+/* tasks in the to-do list */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* style for the tasks */
+li {
+    background: #EFCC7E;
+    height: 40px;
+    line-height: 40px;
+    color: #383C47;
+}
+li:nth-child(2n) {
+    background: #8D7844;
+}
+
+li:hover span {
+    width: 40px;
+    opacity: 1.0;
+}
+
+/* text box for adding new task */
+input {
+    font-size: 18px;
+    background-color: #F1F3EE;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    color: #383C47;
+    border: 3px solid rgba(0,0,0, 0);
+}
+
+input:focus {
+    border: 3px solid #8D7844;
+    outline: none;
+}
+
+/* delete icon on the left of each task */
+span {
+    background: #E74C3C;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: #F1F3EE;
+    width: 0;
+    display: inline-block;
+    transition: 0.2s linear;
+    opacity: 0;
+}
+
+/* to-do list style */
 #container {
-    border: orange 2px solid;
+    box-shadow: 0 0 3px rgba(0,0,0, 0.3);
     width: 360px;
-    margin: 0 auto;
+    margin: 100px auto;
+    background: #F1F3EE;
+}
+
+/* class to cross off completed task */
+.completed {
+    color: gray;
+    text-decoration: line-through;
 }
